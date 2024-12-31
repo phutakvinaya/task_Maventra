@@ -1,0 +1,179 @@
+<div>
+    <div class="gridname">
+        <div class="dashboardtext">{{name}}</div>
+        <div class="datetext">{{createdate | date}}</div>
+        <div><img src="../../assets/images/search.png" alt="" class="imagewidth backimage"></div>
+    </div>
+
+    <div class="box">
+        <div class="grid3">
+            <div>
+                <span class="welcometext">Welcome back Anna !</span><br>
+                <span>You've learned <b>80% </b>of your goal this week!</span><br>
+                <span>Keep it up and improve the result !</span>
+            </div>
+
+            <div>
+                <img src="../../assets/images/girlwithlaptop.jpg" alt="" width="300px">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="d-flex justify-content-between BACKCOLOR">
+                <div class="subtext">Latest Result</div>
+                <div class="subtextmore" style="cursor: pointer;">More &nbsp;<img
+                        src="../../assets/images/right-arrow.png" alt="" width="20px"></div>
+            </div>
+
+            <div *ngFor="let course of courses" class="d-flex justify-content-between BACKCOLOR">
+              <div>
+                <div>
+                    {{course.category}}
+                </div>
+                <div class="subtextmore" style="color: #0000006b;">
+                    {{course.courseName}}
+                </div>
+              </div>
+                <!-- <div class="progress">
+                    <div class="progress-bar" id="progressBar" #progressBar>{{percent}}</div>
+                    {{course.percentage}}%
+                    <mat-progress-bar mode="determinate" [value]="percentagevalue"></mat-progress-bar>
+                </div> -->
+
+                <div class="progress-container">
+
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        [style.width]="course.percentage + '%'"
+                        [class]="getProgressClass(course.percentage)"
+                      >
+                      </div>
+                    </div>
+            </div>
+            &nbsp;<span class="progress-text">{{ course.percentage }}%</span>
+
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex justify-content-between BACKCOLOR">
+                <div class="subtext">Time Spent On Learning</div>
+                <div class="subtextmore" style="cursor: pointer;">Last Week &nbsp;<img
+                        src="../../assets/images/down-arrow.png" alt="" width="20px"></div>
+            </div>
+
+            <!-- <div *ngFor="let course of courses" class="d-flex justify-content-between BACKCOLOR">
+                <div>
+                    {{course.category}}
+                </div>
+                <div class="">
+                    {{course.courseName}}
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar" #progressBar>{{percent}}</div>
+                    {{course.percentage}}%
+                    <mat-progress-bar mode="determinate" [value]="percentagevalue"></mat-progress-bar>
+                </div>
+
+
+            </div> -->
+
+
+            <div>
+                <div class="d-flex daybox">
+                    Monday : <div *ngFor="let day of learningtimemonday">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Tuesday : <div *ngFor="let day of learningtimetus">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Wednesday : <div *ngFor="let day of learningtimewed">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Thursday : <div *ngFor="let day of learningtimethurs">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Friday : <div *ngFor="let day of learningtimefri">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Saturday : <div *ngFor="let day of learningtimesat">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+
+                <div class="d-flex daybox">
+                    Sunday : <div *ngFor="let day of learningtimesun">
+                        <span>Grammer: {{day.grammar}} </span><span>listening :{{day.listening}}</span> <span> vocabulary:{{day.vocabulary}} </span>
+                        <span>writing:{{day.writing}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="d-flex justify-content-between mt-5">
+            <div class="subtext">Your Course</div>
+            <div class="subtextmore" style="cursor: pointer;">More &nbsp;<img src="../../assets/images/right-arrow.png"
+                    alt="" width="20px"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="d-flex justify-content-between cardbackground">
+                    <div class="card1b2">B2</div>
+                    <div><span style="font-size: 13px;color: #ffffff8c;">Business English</span> <br> <span style="font-size: 18px;
+                        color: white;
+                        font-weight: 500;">Grammer</span></div>
+                    <div><img src="../../assets/images/right-arrow.png" alt="" width="20px"></div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="d-flex justify-content-between cardbackground2">
+                    <div class="card1b3">B2</div>
+                    <div><span style="font-size: 13px;color: #ffffff8c;">Common English</span> <br> <span style="font-size: 18px;
+                        color: white;
+                        font-weight: 500;">Phrasal Verbs</span></div>
+                    <div><img src="../../assets/images/right-arrow.png" alt="" width="20px"></div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="d-flex justify-content-between cardbackground3">
+                    <div class="card1c2">C1</div>
+                    <div><span style="font-size: 13px;color: #ffffff8c;">Business Spanish</span> <br> <span style="font-size: 18px;
+                        color: white;
+                        font-weight: 500;">Vocabulary</span></div>
+                    <div><img src="../../assets/images/right-arrow.png" alt="" width="20px"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

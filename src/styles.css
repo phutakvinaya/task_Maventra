@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+.main {
+    padding: 20px;
+    border-radius: 20px;
+    /* background-color: aliceblue; */
+}
+
+.box {
+    background-color: rgb(240 166 166 / 35%);
+    margin-top: 30px;
+    padding: 34px;
+    border-radius: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.imagewidth {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.dashboardtext {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #000000b5;
+}
+.datetext{
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #547176;
+}
+.subtext{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+.subtextmore{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto';
+}

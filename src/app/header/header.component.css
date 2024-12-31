@@ -1,0 +1,88 @@
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #sidebar header {
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+  }
+  
+
+  
+  #sidebar header a:hover {
+    color: #fff;
+  }
+  
+  #sidebar .nav{
+    
+  }
+  
+  #sidebar .nav a{
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+  }
+  
+  #sidebar .nav a:hover{
+    background: none;
+    color: #ECEFF1;
+  }
+  
+  #sidebar .nav a i{
+    margin-right: 16px;
+  }
+
+
+  .logotext{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:25px;
+    font-weight:700;
+    color:black !important;
+    text-decoration: none;
+    text-align: center;
+  }
+  ul{
+    list-style: none;
+    padding-left: 0rem;
+  }
+  ul li a{
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  ul li a:hover{
+    color:rgb(18, 18, 188)
+  }
+
+
+ ul li{
+    padding: 20px;
+ }
+ .stickyposition{
+    position: fixed;
+    bottom: 0px;
+    padding: 11px;
+    background: aliceblue;
+    height: 140px;
+    border-radius: 10px;
+ }
+
+ .imagewidth{
+  width:20px;
+  margin-right:10px;
+ }
